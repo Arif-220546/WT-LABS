@@ -1,0 +1,44 @@
+<html>
+<body>
+<h2>JS events</h2>
+<title>JS Events</title>
+<button onclick="sayHello()">Click Me</button>
+<br><br>
+
+<p id="text"
+   onmouseover="highlight()"
+   onmouseout="removeHighlight()">
+   hover over this text
+</p>
+<br><br>
+
+<form onsubmit="submitForm(event)">
+<input type="text" placeholder="Type something">
+<button type="submit">Submit</button>
+</form>
+<script>
+
+function sayHello(){
+alert("good morning");
+
+
+  const t=document.getElementById("text");
+  t.style.color="white";
+  t.style.background="blue";
+  t.style.padding="5px";
+}
+
+function removeHighlight(){
+  const t=document.getElementById("text");
+  t.style.color="black";
+  t.style.background="transparent";
+}
+
+function submitForm(event){
+  event.preventDefault();
+  console.log("Form has been submitted!");
+}
+</script>
+</body>
+</html>
+

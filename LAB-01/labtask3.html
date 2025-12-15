@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>Built-in functions </title>
+</head>
+<body>
+<h2> Build-in Functions</h2>
+
+<button onclick="showAlert()">Show Alert</button>
+<br><br>
+
+<button onclick="askuser()">Ask Name</button>
+<h3 id="displayName"></h3>
+
+
+<script>
+
+function showAlert(){
+  alert("hello,this i an alert message");
+}
+
+function askuser(){
+  let name=prompt("what is your name?");
+  if(name){
+    document.getElementById("displayName").innerHTML="Nice to meet you,"+name+"!";
+  }
+  else{
+    document.getElementById("displayName").innerHTML="you didn't enter a name.";
+  }
+}
+
+
+ 
+</script>
+</body>
+</html>

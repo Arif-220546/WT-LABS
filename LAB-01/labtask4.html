@@ -1,0 +1,23 @@
+<html>
+<head>
+<script>
+function changetext(){
+  document.getElementById("p1").innerHTML="This is changed paragraph"
+}
+function addtext(){
+  document.getElementById("heading").innerHTML+="Added by some text"
+}
+function removetext(){
+  document.getElementById("p2").innerHTML=""
+}
+</script>
+</head>
+<body>
+<p id="p1">This is original paragraph</p>
+<h2 id="heading">This is a heading</h2>
+<p id="p2">This is original paragraph</p>
+<input type="button" onclick="changetext()" value="Change here">
+<input type="button" onclick="addtext()" value="Add here">
+<input type="button" onclick="removetext()" value="Remove here">
+</body>
+</html>

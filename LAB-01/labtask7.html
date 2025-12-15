@@ -1,0 +1,52 @@
+<html>
+<head>
+<title> webpage</title>
+</head>
+<body>
+<h2> webpage demo</h2>
+
+
+<button onclick="askName()">click to enter your name</button>
+<h3 id="greeting"></h3>
+
+
+<h2>Registration Form</h2>
+<form onsubmit="return validateForm()">
+  <input id="username" type="text" placeholder="enter username"><br><br>
+  <input id="email" type="email" placeholder="enter Email"><br><br>
+  <button type="submit">Submit</button>
+</form>
+<p id ="error" style="color:red"></p>
+
+
+<br>
+<button onclick="window.print()">print this page</button>
+
+<script>
+
+function askName(){
+  let name=prompt("What is your name?");
+  if (name){
+      document.getElementById("greeting").innerHTML="Hello"+name+"!welcome to my webpage";
+  }
+  else{
+      document.getElementById("greeting").innerHTML="you didn't enter a name!";
+  }
+}
+
+
+function ValidateForm(){
+  let user=document.getElementById("username").value;
+  let mail=document.getElementById("email").value;
+  let errorMsg=document.getElementById("error");
+  if(user===""||mail===""){
+     errorMSg.innerHTML="all fields are required!";
+     return false;
+  }
+  errorMsg.innerHTML="";
+  alert("Form Submitted Successfully!");
+  return true;
+}
+</script> 
+</body>
+</html>

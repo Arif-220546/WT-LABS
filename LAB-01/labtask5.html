@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Style HTML Tags with JS </title>
+</head>
+<body>
+ <h1 id="myHeading">Styling  with JS</h1>
+ <button onclick="toggleStyle()">Toggle Style</button>
+ <script>
+   let isStyled=false;
+   const toggleStyle=()=>{
+     const heading=document.getElementById("myHeading");
+     if (!isStyled){
+         heading.style.color="white";
+         heading.style.backgroundColor="blue";
+         heading.style.fontSize="40px";
+         heading.style.padding="10px";
+}else{
+         
+         heading.style.color="black";
+         heading.style.backgroundColor="yellow";
+         heading.style.fontSize="30px";
+         heading.style.padding="5px";
+}
+isStyled=!isStyled;
+}
+ 
+ </script>
+ 
+</body>
+</html> 
